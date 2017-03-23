@@ -1,0 +1,25 @@
+Ubuntu 12.04 在root登陆之后没有声音的解决方法
+Ubuntu在root用户下，为了安全考虑默认是关闭了声音系统的。
+如果要开很简单，因为root登录后pulseaudio没有启动。所以要先启动它
+将root加到pulse和pulse-access组：
+sudo usermod -a -G pulse-access root
+gpasswd -a root pulse
+gpasswd -a root pulse-access
+然后：
+编辑/etc/default/pulseaudio文件
+
+cp -p  /etc/default/pulseaudio  /etc/default/pulseaudio.bak
+
+vim /etc/default/pulseaudio
+修改以下两处
+PULSEAUDIO_SYSTEM_START=1
+
+DISALLOW_MODULE_LOADING=0
+
+改为1和0，表示允许运行在system环境，允许动态加载模块。
+重启一下计算机，声音就会出来了
+
+ 
+
+在解决了这个问题之后重启之后用root登陆，也会会没法连无线网络，
+解决方法是把无线网络断开重新连接一次就ok了，我是这样子做的就能解决了。要是不行那就再重新找方法吧。。。

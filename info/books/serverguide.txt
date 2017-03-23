@@ -1,0 +1,16 @@
+1.introduction
+info
+	Ubuntu Installation Guide
+		https://help.ubuntu.com/14.04/installation-guide/
+	Ubuntu Documention website
+		https://help.ubuntu.com/
+	Canonical Services
+		http://www.canonical.com/services
+	Ubuntu Support
+		http://www.ubuntu.com/support
+
+2.Installation
+	The differences between the two editions are the lack of an X window environment in the Server Edition 
+	and the installation process.
+	http://www.kroah.com/lkn/
+	

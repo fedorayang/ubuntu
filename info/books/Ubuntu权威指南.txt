@@ -1,0 +1,62 @@
+不同的linux系统之间没有本质的差别
+8.04，,8.10
+<<UNIX操作系统设计>>
+http://www.ubuntu.com
+http://www.ubuntu.org.cn
+https://help.ubuntu.com
+https://help.ubuntu.com/community/UserDocumentation
+http://wiki.ubuntu.org.cn //中文维基，可以参与翻译
+http://www.ubuntu.com/support/community/webforums
+https://lists.ubuntu.com
+https://wiki.ubuntu.com/HowToGetHelp
+
+http://www.gnu.org/manual
+
+disable ipv6 ubuntu
+command --help
+man -k
+man 5 passwd
+/usr/share/man
+man find | col -b >find.txt
+info
+info info
+http://www.gnu.org/software/texinfo/manual/texinfo/
+
+apt-get,apttitude和synaptic等软件管理工具
+新立得软件包管理器
+update-notifier
+update-manager
+page 34 第二章
+page 334 软件管理
+apt-get
+dpkg
+	查询一个软件包中包含哪些文件 dpkg -L pakename
+apttitude
+gnome-app-install
+synaptic
+GPG公钥验证软件包数字签名的合法性
+multiverse
+APT(Advanced Package Tool)
+/etc/apt/sources.list
+/etc/apt/sources.list.d
+/etc/apt/apt.conf.d
+/etc/cron.daily/apt
+/etc/cron.daily/dpkg
+/etc/cron.weekly/apt-xapian-index
+/var/lib/apt/lists
+/var/cache/apt/archives
+/var/cache/apt/archives/partial
+Packages.gz
+apt-get install quota
+apt-get --reinstall install quota 
+apt-get update
+apt-get upgrade
+apt-get purge quota
+deb http://cn.archive.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse
+type  uri                                  distribution     [component1] ...
+type
+	deb
+	deb-src
+	
+  
+page 341 

@@ -1,0 +1,13 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install samba samba-doc smbldap-tools
+vim /etc/samba/smb.conf
+	security = user
+	[home]
+	comment = my home
+	path = /home
+	browseable = yes
+	writable = yes
+sudo smbpasswd -a fedorayang
+sudo service smbd restart
+sudo service nmbd restart

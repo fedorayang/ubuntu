@@ -1,0 +1,5 @@
+1.install
+	Universal-USB-Installer-1.9.5.2制作usb启动盘
+	把iso放在u盘中(需要这步吗?)
+2.打开终端
+		Dash home ->输入terminal		

@@ -1,0 +1,62 @@
+Ubuntu14.04解决ssh登录不上(
+2014年10月，新装了一个VMware虚拟机，Ubuntu14.04 LTS版本。 
+ssh登录，有时候登录不上，有时候能登上。
+
+
+解决办法：
+（1）查看ip地址是否冲突
+我在单位的虚拟机ip地址是192.168.14.85，与其它机器冲突了。改成了192.168.14.83
+
+
+（2）关闭Ubuntu14.04的防火墙
+root@stgman-desktop:~# sudo ufw disable
+
+防火墙在系统启动时自动禁用
+
+亲自尝试了sudo ufw enable，从我的win7系统ssh登录不上虚拟机。但是在Ubuntu本机上ssh 192.168.14.83可以登录成功。
+
+
+
+
+（3）Ubuntu系统上安装、启动sshd服务
+sudo apt-get install openssh-server openssh-client
+
+sudo /etc/init.d/ssh restart  
+sudo service ssh restart
+
+【对于CentOS系统，启动sshd服务，请参考】http://blog.csdn.net/fenglailea/article/details/12191607
+
+
+
+
+（4）ssh还不能登录上，就修改sshd的默认配置
+
+ssh出现permission denied (publickey)问题:
+
+
+
+
+修改/etc/ssh/sshd-config文件.
+
+
+
+
+将其中的PermitRootLogin no修改为yes
+
+
+
+
+PubkeyAuthentication yes修改为no
+
+
+
+
+AuthorizedKeysFile .ssh/authorized_keys前面加上#屏蔽掉，
+
+
+
+
+PasswordAuthentication no修改为yes就可以了。
+
+ 
+

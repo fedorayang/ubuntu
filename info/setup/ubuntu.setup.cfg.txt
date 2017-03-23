@@ -1,0 +1,62 @@
+1.安装ubuntu10.04
+2.配置网络
+	在图形界面下
+	在命令行界面下
+3.安装vim
+		apt-get install vim 
+4.切换到文字界面
+	vim /etc/default/grub
+	GRUB_CMDLINE_LINUX_DEFAULT="text"
+	
+	update-grub
+5.改变vmare启动画面等待时间
+	Ubuntu.vmx
+		bios.bootDelay = "15000"	
+6.进入单用户维护模式	
+	重启ubuntu，随即长按shirft进入grub菜单
+	选择recovery mode，按"e"键进入编辑页面	
+ssh登陆
+管理员权限
+磁盘分区管理
+开启samba,nfs,ftp等服务
+
+/boot/ 1g	efi
+/boot 2g	ext4
+/swap 8g(8192)
+/ 96g(98304)	ext4
+/home	ext4
+
+usr:ubuntu
+pwd:root
+
+Ubuntu 14.04 root用户登录设置
+sudo gedit /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+greeter-show-manual-login=true 
+然后我们启动root帐号：
+sudo passwd root
+重启ubuntu
+
+ubuntu 14.04 修改主机名
+第一步：ubuntu主机名位于/etc/hostname
+第二步：修改/etc/hosts文件，将其中127.0.1.1对应的主机名更改为新的主机名，与/etc/hostname里的主机名一致。
+第三步：重启系统。
+
+
+设置启动时默认亮度
+/etc/rc.local
+echo 18 > /sys/class/backlight/acpi_video0/brightness
+cat /sys/class/backlight/acpi_video0/max_brightness
+
+Boot-Repair
+
+提示符
+http://hi.baidu.com/sf_chipan/item/e0eae034584ecdd22684f45e
+
+
+disable ipv6 ubuntu
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+vim /etc/sysctl.conf
+#disable IPv6
+	net.ipv6.conf.all.disable_ipv6 = 1
+	net.ipv6.conf.default.disable_ipv6 = 1
+	net.ipv6.conf.lo.disable_ipv6 = 1

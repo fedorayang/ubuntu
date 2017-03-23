@@ -1,0 +1,10 @@
+到oracle官网下载java.bin
+./jdk-6u45-linux-x64.bin
+sudo vim ~/.bashrc
+	export JAVA_HOME=/home/setup/java/jdk1.6.0_45/
+	export JRE_HOME=${JAVA_HOME}/jre
+	export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+	export PATH=${JAVA_HOME}/bin:$PATH
+重新登录 java -version;javac -version
+ 
+	

@@ -1,0 +1,5 @@
+sudo apt-get install gnupg flex bison gperf python-markdown libxml2-utils xsltproc python u-boot-tools lzma
+sudo apt-get install build-essential zip curl zlib1g-dev libc6-dev lib32ncurses5-dev
+sudo apt-get install lib32z-dev libgl1-mesa-dev g++-multilib mingw32 tofrodos
+sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 x11proto-core-dev libx11-dev lib32readline-gplv2-dev
+sudo apt-get install vim emacs

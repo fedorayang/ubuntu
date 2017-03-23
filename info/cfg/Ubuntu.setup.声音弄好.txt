@@ -1,0 +1,30 @@
+http://forum.ubuntu.org.cn/viewtopic.php?t=372678
+http://forum.ubuntu.org.cn/viewtopic.php?f=42&t=373439
+http://wiki.ubuntu.org.cn/UbuntuHelp:SoundTroubleshooting
+https://wiki.ubuntu.com/Sound
+http://wenku.baidu.com/link?url=uowGCT1jaPUHplNIX3oqN7hodEUAMvJGW-1DMJp5iL8mqJMrF1jNBpwepEgb0Ft6BYHTwpYdZX-PqFqGPg5f71MiB5lRxNk1ZLaEnpIc_0e
+http://blog.csdn.net/netingcn/article/details/1693846
+http://blog.chinaunix.net/uid-2595338-id-2139474.html
+http://www.cnblogs.com/bigmengzi/archive/2011/11/22/2259601.html
+http://www.moqifei.com/archives/965
+http://blog.csdn.net/crycheng/article/details/7254184
+http://blog.solrex.org/articles/solve-ubuntu-intel-soundcard-problem-with-latest-alsa-driver.html
+http://blog.csdn.net/ldl22847/article/details/8616921
+
+/etc/modprobe.d/alsa-base.conf
+alsa       alsactl    alsaloop   alsamixer  alsaucm
+Éù¿¨ÐÍºÅ
+head -1 /proc/asound/card0/codec#0
+Codec: Conexant CX20590
+
+https://bugtrack.alsa-project.org/alsa-bug
+
+root@E430c:~# cat /proc/asound/version
+Advanced Linux Sound Architecture Driver Version 1.0.25.
+root@E430c:~# cat /proc/asound/cards
+ 0 [PCH            ]: HDA-Intel - HDA Intel PCH
+                      HDA Intel PCH at 0xe4a10000 irq 47
+29 [ThinkPadEC     ]: ThinkPad EC - ThinkPad Console Audio Control
+                      ThinkPad Console Audio Control at EC reg 0x30, fw unknown
+
+                      

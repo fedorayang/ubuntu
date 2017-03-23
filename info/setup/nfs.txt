@@ -1,0 +1,12 @@
+sudo apt-get install nfs-kernel-server nfs-common
+sudo vim /etc/exports
+	/ *(ro,sync,no_root_squash)
+	/home *(rw,sync,no_root_squash,no_subtree_check)	
+sudo service nfs-kernel-server restart 
+	
+sudo /etc/init.d/rpcbind restart	
+sudo /etc/init.d/nfs-kernel-server restart 
+
+测试
+在其他电脑上
+ sudo mount -t nfs -o nolock 192.168.1.22(此电脑的ip地址):/home cyplayer/
